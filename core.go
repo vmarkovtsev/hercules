@@ -10,6 +10,7 @@ import (
 	"gopkg.in/src-d/hercules.v9/internal/plumbing/uast"
 	"gopkg.in/src-d/hercules.v9/internal/yaml"
 	"gopkg.in/src-d/hercules.v9/leaves"
+	"gopkg.in/src-d/hercules.v9/leaves/research"
 )
 
 // ConfigurationOptionType represents the possible types of a ConfigurationOption's value.
@@ -173,6 +174,7 @@ func EnablePathFlagTypeMasquerade() {
 }
 
 func init() {
-	// hack to link with .leaves
+	// hack to link with ./leaves
 	_ = leaves.BurndownAnalysis{}
+	_ = research.TyposDatasetBuilder{}
 }
